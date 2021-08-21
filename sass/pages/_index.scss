@@ -1,0 +1,138 @@
+.gps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, $colour_darkengrey 90%, darken($colour_darkengrey, 20));
+    & span, p{
+        margin-right: 30px;
+    }
+}
+
+.find{
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    background-color: $colour_grey;
+    @include mypaddingsection;
+    &__btn{
+        width: 60%;
+
+    }
+    & p, h1{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    &__btn{
+        @include mybtn;
+    }
+}
+
+.funct{
+    @include mypaddingsection;
+    & h1{
+        margin-left: 15px;
+        margin-bottom: 40px;
+    }
+    
+    &__choice{
+        @include mybtn($colour_black, $colour_grey);
+
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 45px;
+        width: 80%;
+
+        &__nb{
+            background-color: $colour_purple;
+            color: $colour_white;
+            padding: 5px 11px;
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            font-size: 0.9em;
+        }
+        
+        &__title{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        & span{
+            margin-left: 40px;
+            font-size: 1.2em;
+        }
+        
+        &:hover{
+            @include mybtn($colour_black, lighten($colour_purple, 40%));
+            > span{
+                color: $colour_purple;
+            }
+        }
+    }
+}
+
+.rs{
+    @include mypaddingsection;
+    background-color: $colour_grey;
+
+    & h1{
+        margin-left: 15px;
+        margin-bottom: 40px;
+    }
+
+    &__r{
+        @include mybtn($colour_black, $colour_white, 0px);
+        position: relative;
+        width: 90%;
+        height: 300px;
+
+        &__img img{
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+            border-radius: $myborderradiusvar;
+        }
+
+        &__new{
+            position: absolute;
+            top:20px;
+            right: 20px;
+            padding: 5px 15px;
+            background-color:$colour_green;
+            color: darken($color: $colour_green, $amount: 30%);
+            font-size: 0.9em;
+            &--inactive{
+                display: none;
+            }
+        }
+        
+        &__desc{
+            background-color: $colour_white;
+            position: absolute;
+            bottom: 0;
+            height: 30%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0px 0px $myborderradiusvar $myborderradiusvar;
+
+            & h3, p{
+                margin: 5px 0 5px 20px;
+            }
+
+            & span{
+                position: absolute;
+                right: 0;
+                margin-right: 30px;
+                font-size: 25px;
+            }
+        }
+    }
+}

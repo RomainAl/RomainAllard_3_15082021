@@ -1,0 +1,23 @@
+@mixin mypaddingsection {
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+
+@mixin myboxshadow {
+    box-shadow: 5px 5px 25px -12px #000000;
+}
+
+@mixin myborderradius {
+    border-radius: 30px;
+}
+
+@mixin mybtn($color_txt: $colour_white, $color_bg: linear-gradient($colour_pink, $colour_purple), $padding : 18px){
+    margin: 30px auto 0px auto;
+    border: none;
+    padding: $padding;
+    background: $color_bg;
+    color: $color_txt;
+    font-size: 1em;
+    @include myboxshadow;
+    @include myborderradius;
+}

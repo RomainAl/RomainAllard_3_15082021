@@ -1,0 +1,17 @@
+.footer{
+    background: $colour_darkengrey2;
+    padding: 20px;
+    color: $colour_white;
+    &__list li{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    & a{
+        color: $colour_white;
+    }
+
+    & span{
+        margin-right: 5px;
+    }
+}

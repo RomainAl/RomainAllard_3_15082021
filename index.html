@@ -1,12 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OHMYFOOD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>OHMYFtOOD</title>
+
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <div class="header__logo">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="OHMYFOOD Logo">
+        </div>
+        <span class="header__back header__back--inactive"><i class="fas fa-arrow-left" onclick="location.href='index.html'"></i></span>
+
+    </header>
+
+    <div class="gps">
+
+        <span><i class="fas fa-map-marker-alt"></i></span>
+        <p>Paris, Belleville</p>
+
+    </div>
+
+    <section class="find">
+
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+        <button type="button" onclick="location.href='#rs'" class="find__btn">Explorez nos restaurants</button>
+
+    </section>
+
+    <section class="funct">
+
+        <h1 class="funct__title">Fonctionnement</h1>
+
+        <a href="#" class="funct__choice">
+            <p class="funct__choice__nb">1</p>
+            <span><i class="fas fa-mobile-alt"></i></span>
+            <p class="funct__choice__title">Choisissez un restaurant</p>
+        </a>
+
+        <a href="#" class="funct__choice">
+            <p class="funct__choice__nb">2</p>
+            <span><i class="fas fa-bars"></i></span>
+            <p class="funct__choice__title">Composez votre menu</p>
+        </a>
+
+        <a href="#" class="funct__choice">
+            <p class="funct__choice__nb">3</p>
+            <span><i class="fas fa-store"></i></span>
+            <p class="funct__choice__title">Dégustez au restaurant</p>
+        </a>
+
+    </section>
+
+    <section id="rs" class="rs">
+
+        <h1>Restaurants</h1>
+
+        <article class="rs__r" onclick="location.href='./menu_1.html'">
+            <mark class="rs__r__new rs__r__new--active">Nouveau</mark>
+            <div class="rs__r__img">
+                <img src="./images/restaurants/resto_1.jpg" alt="La palette du goût" width="500">
+            </div>
+            <div class="rs__r__desc">
+                <div>
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </div>
+                <!--<span><i class="fas fa-heart rs__r__like"></i></span>-->
+                <span class="rs__r__desc__like"><i class="far fa-heart"></i></span>
+            </div>
+            
+        </article>
+
+        <article class="rs__r" onclick="location.href='./menu_1.html'">
+            <mark class="rs__r__new rs__r__new--active">Nouveau</mark>
+            <div class="rs__r__img">
+                <img src="./images/restaurants/resto_2.jpg" alt="La note enchantée" width="500">
+            </div>
+            <div class="rs__r__desc">
+                <div>
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                </div>
+                <span class="rs__r__desc__like"><i class="far fa-heart"></i></span>
+            </div>
+        </article>
+
+        <article class="rs__r" onclick="location.href='./menu_1.html'">
+            <mark class="rs__r__new rs__r__new--inactive">Nouveau</mark>
+            <div class="rs__r__img">
+                <img src="./images/restaurants/resto_3.jpg" alt="A la française" width="500">
+            </div>
+            <div class="rs__r__desc">
+                <div>
+                    <h3>A la française</h3>
+                    <p>Cité Rouge</p>
+                </div>
+                <spa class="rs__r__desc__like"n><i class="far fa-heart"></i></span>
+            </div>
+        </article>
+
+        <article class="rs__r" onclick="location.href='./menu_1.html'">
+            <mark class="rs__r__new rs__r__new--inactive">Nouveau</mark>
+            <div class="rs__r__img">
+                <img src="./images/restaurants/resto_4.jpg" alt="Le délice des sens" width="500">
+            </div>
+            <div class="rs__r__desc">
+                <div>
+                    <h3>Le délice des sens</h3>
+                    <p>Folie Méricourt</p>
+                </div>
+                <span class="rs__r__desc__like"><i class="far fa-heart"></i></span>
+            </div>
+        </article>
+
+    </section>
+
+    <footer class="footer">
+
+        <p class="font_Shrikhand">ohmyfood</p>
+        <ul class="footer__list">
+            <li>
+                <span><i class="fas fa-utensils"></i></span>
+                Proposez un restaurant
+            </li>
+            <li>
+                <span><i class="fas fa-hands-helping"></i></span>
+                Devenir partenaire
+            </li>
+            <li>Mentions légales</li>
+            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
+
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,23 @@
+.header{
+    background-color: $colour_white;
+    height: 40px;
+    padding-top: 20px;
+    position: relative;
+    //background: url("./images/logo/ohmyfood.png") no-repeat center;
+    //background-size: cover;
+    &__back{
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        font-size: 20px;
+        &--inactive{
+            display: none;
+        }
+    }
+    &__logo{
+        text-align: center;
+        & img{
+            width: 43%;
+        }
+    }
+}
