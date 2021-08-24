@@ -7,26 +7,38 @@ body {
 }
 
 h1{
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: bold;
 }
 
+h2{
+    font-size: 1.1em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 h3{
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 p{
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: lighter;
 }
 
 ul{
-    font-size: 1.1em;
+    font-size: 1em;
     list-style-type: none;
     padding-left: 0px;
 }
 
 a{
     text-decoration: none;
+}
+
+img{
+    width: 100%;
 }

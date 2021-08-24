@@ -32,6 +32,9 @@
 }
 
 .funct{
+    display: flex;
+    flex-direction: column;
+    
     @include mypaddingsection;
     & h1{
         margin-left: 15px;
@@ -79,6 +82,8 @@
 .rs{
     @include mypaddingsection;
     background-color: $colour_grey;
+    display: flex;
+    flex-direction: column;
 
     & h1{
         margin-left: 15px;
@@ -125,13 +130,6 @@
 
             & h3, p{
                 margin: 5px 0 5px 20px;
-            }
-
-            & span{
-                position: absolute;
-                right: 0;
-                margin-right: 30px;
-                font-size: 25px;
             }
         }
     }

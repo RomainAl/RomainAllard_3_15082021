@@ -1,0 +1,72 @@
+.block_menu{
+    position: relative;
+    height: 1550px;
+    &__img{
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $colour_white;
+    width: 100%;
+    border-radius: 40px;
+    bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & h1, h2, hr, h3, p{
+        margin: 5px 0 5px 20px;
+    }
+
+    & h2{
+        margin-top: 40px;
+    }
+
+    & hr{
+        @include myhr;
+        margin-top: 5px;
+    }
+
+    &__item{
+        width: 95%;
+        cursor: pointer;
+        @include mybtn($colour_black, $colour_white, 0px);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        &__price{
+            position: absolute;
+            bottom: 7px;
+            right: 20px;
+        }
+        &__check{
+            position: absolute;
+            right: -70px;
+            top: 0;
+            font-size: 25px;
+            background-color: $colour_green;
+            color: $colour_white;
+            height: 100%;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__btn{
+        @include mybtn;
+    }
+}

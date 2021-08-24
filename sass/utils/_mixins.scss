@@ -8,11 +8,11 @@
 }
 
 @mixin myborderradius {
-    border-radius: 30px;
+    border-radius: $myborderradiusvar;
 }
 
 @mixin mybtn($color_txt: $colour_white, $color_bg: linear-gradient($colour_pink, $colour_purple), $padding : 18px){
-    margin: 30px auto 0px auto;
+    margin: 10px auto 10px auto;
     border: none;
     padding: $padding;
     background: $color_bg;
@@ -20,4 +20,13 @@
     font-size: 1em;
     @include myboxshadow;
     @include myborderradius;
+}
+
+@mixin myhr {
+    width: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 3px;
+    border: none;
+    background-color: $colour_green;
 }
