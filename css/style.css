@@ -40,12 +40,25 @@ a {
 }
 
 img {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 body {
   box-sizing: border-box;
   background: #FFFFFF;
+}
+
+.bloc_page {
+  margin: auto;
+  width: 100%;
+}
+@media screen and (min-width: 1500px) {
+  .bloc_page {
+    width: 1500px;
+  }
 }
 
 .header {
@@ -56,9 +69,14 @@ body {
 }
 .header__back {
   position: absolute;
-  left: 15px;
-  top: 20px;
+  left: 30%;
+  top: 24px;
   font-size: 20px;
+}
+@media screen and (max-width: 767px) {
+  .header__back {
+    left: 15px;
+  }
 }
 .header__back--inactive {
   display: none;
@@ -67,13 +85,31 @@ body {
   text-align: center;
 }
 .header__logo img {
-  width: 43%;
+  width: 200px;
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #242424;
-  padding: 20px;
+  padding: 30px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    align-items: flex-start;
+  }
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .footer__list {
+    align-items: flex-start;
+  }
 }
 .footer__list li {
   padding-top: 5px;
@@ -104,7 +140,7 @@ body {
   padding-bottom: 50px;
 }
 .find__btn {
-  width: 60%;
+  width: 250px;
 }
 .find p, .find h1 {
   margin-left: auto;
@@ -125,15 +161,23 @@ body {
   border-radius: 25px;
 }
 
-.funct {
-  display: flex;
-  flex-direction: column;
+.section_funct {
   padding-top: 35px;
   padding-bottom: 50px;
 }
-.funct h1 {
+.section_funct h1 {
   margin-left: 15px;
   margin-bottom: 40px;
+}
+
+.funct {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 767px) {
+  .funct {
+    grid-template-columns: 1fr;
+  }
 }
 .funct__choice {
   margin: 10px auto 10px auto;
@@ -164,7 +208,7 @@ body {
   margin-right: auto;
 }
 .funct__choice span {
-  margin-left: 40px;
+  margin-left: 5%;
   font-size: 1.2em;
 }
 .funct__choice:hover {
@@ -181,16 +225,24 @@ body {
   color: #9948c7;
 }
 
-.rs {
+.section_rs {
   padding-top: 35px;
   padding-bottom: 50px;
   background-color: #F2F2F2;
-  display: flex;
-  flex-direction: column;
 }
-.rs h1 {
+.section_rs h1 {
   margin-left: 15px;
   margin-bottom: 40px;
+}
+
+.rs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 767px) {
+  .rs {
+    grid-template-columns: 1fr;
+  }
 }
 .rs__r {
   margin: 10px auto 10px auto;
@@ -203,13 +255,10 @@ body {
   border-radius: 25px;
   position: relative;
   width: 90%;
-  height: 300px;
+  height: 250px;
+  overflow: hidden;
 }
 .rs__r__img img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center bottom;
   border-radius: 25px;
 }
 .rs__r__new {
@@ -241,17 +290,24 @@ body {
 
 .block_menu {
   position: relative;
-  height: 1550px;
+  height: 2000px;
+}
+@media (max-width: 1150px) {
+  .block_menu {
+    height: 1800px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .block_menu {
+    height: 1550px;
+  }
 }
 .block_menu__img {
   position: absolute;
   top: 0;
-  width: 100%;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
+.section_menu {
   position: absolute;
   background-color: #FFFFFF;
   width: 100%;
@@ -260,10 +316,20 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.menu__title {
+
+.menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 60%;
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    width: 100%;
+  }
+}
+.menu__title {
+  position: relative;
 }
 .menu h1, .menu h2, .menu hr, .menu h3, .menu p {
   margin: 5px 0 5px 20px;
@@ -315,6 +381,7 @@ body {
   justify-content: center;
 }
 .menu__btn {
+  width: 200px;
   margin: 10px auto 10px auto;
   border: none;
   padding: 18px;
@@ -323,11 +390,16 @@ body {
   font-size: 1em;
   box-shadow: 5px 5px 25px -12px #000000;
   border-radius: 25px;
+  margin-top: 20px;
 }
 
 .like {
   position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
   right: 0;
+  top: 0;
   margin-right: 30px;
   font-size: 25px;
 }

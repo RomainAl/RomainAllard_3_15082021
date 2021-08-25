@@ -1,6 +1,10 @@
 .like{
     position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
     right: 0;
+    top: 0;
     margin-right: 30px;
     font-size: 25px;
 }

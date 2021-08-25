@@ -30,3 +30,15 @@
     border: none;
     background-color: $colour_green;
 }
+
+@mixin mobile-only {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin wildscreen-only {
+    @media screen and (min-width: 1500px) {
+        width: 1500px;
+    }
+}

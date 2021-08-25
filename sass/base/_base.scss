@@ -2,3 +2,9 @@ body {
     box-sizing: border-box;
     background: $colour_white;
 }
+
+.bloc_page{
+    margin: auto;
+    width: 100%;
+    @include wildscreen-only;
+}
