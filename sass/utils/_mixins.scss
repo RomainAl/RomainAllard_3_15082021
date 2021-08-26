@@ -4,14 +4,14 @@
 }
 
 @mixin myboxshadow {
-    box-shadow: 5px 5px 25px -12px #000000;
+    box-shadow: 5px 5px 25px -12px $colour_black;
 }
 
 @mixin myborderradius {
     border-radius: $myborderradiusvar;
 }
 
-@mixin mybtn($color_txt: $colour_white, $color_bg: linear-gradient($colour_pink, $colour_purple), $padding : 18px){
+@mixin mybtn($color_txt: $colour_white, $color_bg: $colour_mygrad, $padding : 18px){
     margin: 10px auto 10px auto;
     border: none;
     padding: $padding;
@@ -20,6 +20,12 @@
     font-size: 1em;
     @include myboxshadow;
     @include myborderradius;
+    cursor: pointer;
+}
+@mixin mybtn-hovered {
+    background: $colour_mygrad_lighten;
+    opacity: 0;
+    z-index: -1;
 }
 
 @mixin myhr {
@@ -29,6 +35,15 @@
     height: 3px;
     border: none;
     background-color: $colour_green;
+}
+
+@mixin pseudo-pos {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;  
+    left: 0;
 }
 
 @mixin mobile-only {

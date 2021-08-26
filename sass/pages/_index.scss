@@ -27,6 +27,19 @@
     }
     &__btn{
         @include mybtn;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:hover{
+            box-shadow: 5px 5px 20px -6px $colour_black;
+            &::after{
+                opacity: 1;
+            }
+        }
+        &::after{
+            @include pseudo-pos;
+            @include mybtn-hovered;
+        }
     }
 }
 
@@ -57,10 +70,10 @@
         &__nb{
             background-color: $colour_purple;
             color: $colour_white;
-            padding: 5px 11px;
+            padding: 5px 10px;
             border-radius: 50%;
             position: absolute;
-            left: -10px;
+            left: -12px;
             font-size: 0.9em;
         }
         
