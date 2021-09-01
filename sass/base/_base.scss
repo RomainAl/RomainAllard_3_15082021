@@ -1,10 +1,16 @@
 body {
     box-sizing: border-box;
     background: $colour_white;
+    position: relative;
 }
 
 .bloc_page{
-    margin: auto;
     width: 100%;
     @include wildscreen-only;
+    margin: auto;
+    &__index{
+        opacity: 0.1;
+        z-index: 20;
+        animation: apparition 0.5s ease-in 3.5s both;
+    }
 }

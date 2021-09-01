@@ -1,0 +1,77 @@
+.intro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+    animation: invisibling 0.1s 4s both;
+
+    &__logo{
+        position: relative;
+        text-align: center;
+        top: 47%;
+        color: $colour_white;
+        font-size: 1.2em;
+        z-index: 11;
+        animation: apparition 0.5s ease-in 3.5s reverse both;
+    }
+
+    &__loader {
+        display: block;
+        position: relative;
+        top: 45%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin: -100px 0 0 -100px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top-color: $colour_pink;
+        animation: spin 4s 0.2s linear both;
+        z-index: 11;
+        
+        &:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top-color: $colour_green;
+        animation: spin-reverse 4s 0.1s linear both;
+        }
+        
+        &:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top-color: $colour_purple;
+        animation: spin 4s 0.05s linear both;
+        }
+    }
+    
+    &__pan {
+        position: fixed;
+        width: 100%;
+        height: 50%;
+        background: $colour_darkengrey2;
+        z-index: 10;
+        &__top{
+            animation: pantop 1s 3s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+            top: 0;
+        }
+        &__bottom{
+            animation: panbottom 1s 3s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+            bottom: 0;
+        }
+    }
+}

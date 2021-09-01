@@ -16,7 +16,7 @@
     &--full{
         color: $colour_purple;
         opacity: 0;
-        transition: opacity 0.5s 50ms;
+        transition: opacity 0.9s 100ms;
     }
     &:hover{
         & .like--full{

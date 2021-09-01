@@ -3,9 +3,84 @@
         transform: translateY(10px);
         opacity: 0;
     }
+
     100%{
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
+@keyframes pantop {
+    0%{
+        transform: translateY(0);
+        opacity: 1.0;
+    }
+
+    50%{
+        opacity: 1.0;
+    }
+
+    100%{
+        transform: translateY(-100%);
+        opacity: 0.0;
+    }
+}
+
+@keyframes panbottom {
+    0%{
+        transform: translateY(0);
+        opacity: 1.0;
+    }
+
+    50%{
+        opacity: 1.0;
+    }
+
+    100%{
+        transform: translateY(100%);
+        opacity: 0.0;
+    }
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg);
+        opacity: 0.0;
+    }
+
+    10%, 50%{
+        opacity: 1.0;
+    }
+    
+    100% {
+        transform: rotate(2*360deg);
+        opacity: 0.0;
+    }
+  }
+  
+  @keyframes spin-reverse {
+    0% { 
+        transform: rotate(0deg);
+        opacity: 0.0;
+    }
+
+    10%, 50%{
+        opacity: 1.0;
+    }
+
+    100% {
+        transform: rotate(-9*360deg);
+        opacity: 0.0;
+    }
+  }
+
+  @keyframes invisibling {
+      0%{
+        visibility: visible;
+      }
+
+      100%{
+        visibility: hidden;
+      }
+      
+  }
