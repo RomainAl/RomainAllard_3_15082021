@@ -1,32 +1,29 @@
 .block_menu{
-    position: relative;
-    height: 2000px;
-    @media (min-width: 821px) and (max-width: 1150px) {
-        height: 1800px;
-    }
-    @media (min-width: 801px) and (max-width: 820px){
-        height: 1650px;
-    }
-    @media (min-width: 451px) and (max-width: 800px){
-        height: 1550px;
-    }
-    @media (min-width: 0px) and (max-width: 450px){
-        height: 1450px;
-    }
-
+    display: flex;
+    flex-direction: column;
     &__img{
-        position: absolute;
-        top: 0;
+        height: 300px;
+        @include more-than-mobile{
+            height: 500px;
+        }
+        position: relative;
+        overflow: hidden;
+        &:after{
+            content: "";
+            position:absolute;
+            width:100%;
+            height:40px;
+            left: 0;
+            bottom: 0;
+            border-radius: 200px 200px 0 0;
+            background-color: $colour_white;
+        }
     }
 }
 
 .section_menu{
-    position: absolute;
     background-color: $colour_white;
     width: 100%;
-    border-radius: 40px;
-    bottom: 0;
-    padding-top: 40px;
     padding-bottom: 40px;
 }
 
@@ -41,6 +38,9 @@
     
     &__title{
         position: relative;
+        & h1{
+            width: 70%;
+        }
     }
 
     & h1, h2, hr, h3, p{
@@ -67,49 +67,60 @@
 
         width: 95%;
         @include mybtn($colour_black, $colour_white, 0px);
-        padding-top: 10px;
-        padding-bottom: 10px;
         overflow: hidden;
-        position: relative;
-        &__desc, &__title{
-            width: 70%;
+        display: flex;
+
+        &__description{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            padding: 15px 10px 15px 20px;
+            font-size: 1em;
+            & span{
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            width: 100%;
+            transition: width 0.3s ease-in-out;
         }
 
         &__price{
-            position: absolute;
-            bottom: 9px;
-            right: 20px;
+            width: 20%;
+            height: 100%;
+            margin-top: 35px;
+            margin-right: 10px;
+            text-align: center;
+            transform: translateX(100%);
+            transition: all 0.3s ease-in-out;
         }
 
         &__check{
             & .fa-check-circle{
                 transform: rotate(-360deg);
-                transition: all 0.5s ease-in-out;
+                transition: all 0.6s ease-in-out;
             }
-
-            position: absolute;
-            right: -70px;
-            top: 0;
-            font-size: 25px;
             background-color: $colour_green;
+            height: auto;
+            transform: translateX(100%);
+            width: 20%;
+            font-size: 25px;
             color: $colour_white;
-            height: 100%;
-            width: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        
-        & > * {
-            transition: all 0.5s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
 
         &:hover{
-            & > .menu__item__check, > .menu__item__price{
-                transform: translateX(-70px);
+            & > .menu__item__check{
+                transform: translateX(0);
+            }
+            & > .menu__item__price{
+                transform: translateX(20%);
+            }
+
+            & > .menu__item__description{
+                width: 60%;
             }
             & .fa-check-circle{
                 transform: rotate(0deg);
@@ -134,16 +145,5 @@
             @include pseudo-pos;
             @include mybtn-hovered;
         }
-    }
-}
-
-@keyframes apparition {
-    0%{
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
     }
 }

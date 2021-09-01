@@ -119,10 +119,11 @@
         height: 250px;
         overflow: hidden;
 
-        &__img img{
-            border-radius: $myborderradiusvar;
+        &__img{
+            height: 200px;
+            width: 100%;
         }
-
+        
         &__new{
             position: absolute;
             top:20px;

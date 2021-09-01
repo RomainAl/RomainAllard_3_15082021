@@ -52,6 +52,12 @@
     }
 }
 
+@mixin more-than-mobile {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
 @mixin wildscreen-only {
     @media screen and (min-width: 1500px) {
         width: 1500px;
