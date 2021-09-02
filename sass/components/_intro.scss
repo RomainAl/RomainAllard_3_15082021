@@ -15,7 +15,9 @@
         color: $colour_white;
         font-size: 1.2em;
         z-index: 11;
-        animation: apparition 0.5s ease-in 3.5s reverse both;
+        $effect_dur: 0.5s;
+        $effect_delay: $intro_dur - $effect_dur;
+        animation: apparition $effect_dur ease-in $effect_delay reverse both;
     }
 
     &__loader {
@@ -29,7 +31,8 @@
         border-radius: 50%;
         border: 4px solid transparent;
         border-top-color: $colour_pink;
-        animation: spin 4s 0.2s linear both;
+        $effect_delay: 0.2s;
+        animation: spin $intro_dur $effect_delay linear both;
         z-index: 11;
         
         &:before {
@@ -42,7 +45,8 @@
         border-radius: 50%;
         border: 4px solid transparent;
         border-top-color: $colour_green;
-        animation: spin-reverse 4s 0.1s linear both;
+        $effect_delay: 0.1s;
+        animation: spin-reverse $intro_dur $effect_delay linear both;
         }
         
         &:after {
@@ -55,22 +59,27 @@
         border-radius: 50%;
         border: 4px solid transparent;
         border-top-color: $colour_purple;
-        animation: spin 4s 0.05s linear both;
+        $effect_delay: 0.05s;
+        animation: spin $intro_dur $effect_delay linear both;
         }
     }
     
     &__pan {
         position: fixed;
         width: 100%;
-        height: 50%;
+        height: 51%;
         background: $colour_darkengrey2;
         z-index: 10;
         &__top{
-            animation: pantop 1s 3s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+            $effect_dur: 1s;
+            $effect_delay: $intro_dur - $effect_dur;
+            animation: pantop $effect_dur $effect_delay cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
             top: 0;
         }
         &__bottom{
-            animation: panbottom 1s 3s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+            $effect_dur: 0.8s;
+            $effect_delay: $intro_dur - $effect_dur;
+            animation: panbottom $effect_dur $effect_delay cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
             bottom: 0;
         }
     }

@@ -65,7 +65,7 @@
         align-items: center;
         position: relative;
         height: 45px;
-        width: 80%;
+        width: 75%;
 
         &__nb{
             background-color: $colour_purple;
@@ -78,12 +78,14 @@
         }
         
         &__title{
+            text-align: center;
+            padding-left: 10px;
             margin-left: auto;
             margin-right: auto;
         }
 
         & span{
-            margin-left: 5%;
+            margin-left: 7%;
             font-size: 1.2em;
         }
         

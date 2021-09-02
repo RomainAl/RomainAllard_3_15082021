@@ -2,15 +2,18 @@ body {
     box-sizing: border-box;
     background: $colour_white;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-.bloc_page{
+.bloc__page{
+    box-sizing: border-box;
     width: 100%;
     @include wildscreen-only;
     margin: auto;
     &__index{
-        opacity: 0.1;
-        z-index: 20;
-        animation: apparition 0.5s ease-in 3.5s both;
+        $effect_dur: 0.5s;
+        $effect_delay: $intro_dur - $effect_dur;
+        animation: apparition $effect_dur ease-in $effect_delay both;
     }
 }

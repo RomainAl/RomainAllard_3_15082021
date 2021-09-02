@@ -120,21 +120,22 @@ body {
   box-sizing: border-box;
   background: #FFFFFF;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-.bloc_page {
+.bloc__page {
+  box-sizing: border-box;
   width: 100%;
   margin: auto;
 }
 @media screen and (min-width: 1500px) {
-  .bloc_page {
+  .bloc__page {
     width: 1500px;
   }
 }
-.bloc_page__index {
-  opacity: 0.1;
-  z-index: 20;
-  animation: apparition 0.5s ease-in 3.5s both;
+.bloc__page__index {
+  animation: apparition 0.5s ease-in 2.5s both;
 }
 
 .header {
@@ -290,7 +291,7 @@ body {
   align-items: center;
   position: relative;
   height: 45px;
-  width: 80%;
+  width: 75%;
 }
 .funct__choice__nb {
   background-color: #9948c7;
@@ -302,11 +303,13 @@ body {
   font-size: 0.9em;
 }
 .funct__choice__title {
+  text-align: center;
+  padding-left: 10px;
   margin-left: auto;
   margin-right: auto;
 }
 .funct__choice span {
-  margin-left: 5%;
+  margin-left: 7%;
   font-size: 1.2em;
 }
 .funct__choice:hover {
@@ -435,7 +438,7 @@ body {
   position: relative;
 }
 .menu__title h1 {
-  width: 70%;
+  width: 77%;
 }
 .menu h1, .menu h2, .menu hr, .menu h3, .menu p {
   margin: 5px 0 5px 20px;
@@ -604,7 +607,7 @@ body {
   color: #FFFFFF;
   font-size: 1.2em;
   z-index: 11;
-  animation: apparition 0.5s ease-in 3.5s reverse both;
+  animation: apparition 0.5s ease-in 2.5s reverse both;
 }
 .intro__loader {
   display: block;
@@ -617,7 +620,7 @@ body {
   border-radius: 50%;
   border: 4px solid transparent;
   border-top-color: #f56dee;
-  animation: spin 4s 0.2s linear both;
+  animation: spin 3s 0.2s linear both;
   z-index: 11;
 }
 .intro__loader:before {
@@ -630,7 +633,7 @@ body {
   border-radius: 50%;
   border: 4px solid transparent;
   border-top-color: #81d1b6;
-  animation: spin-reverse 4s 0.1s linear both;
+  animation: spin-reverse 3s 0.1s linear both;
 }
 .intro__loader:after {
   content: "";
@@ -642,21 +645,21 @@ body {
   border-radius: 50%;
   border: 4px solid transparent;
   border-top-color: #9948c7;
-  animation: spin 4s 0.05s linear both;
+  animation: spin 3s 0.05s linear both;
 }
 .intro__pan {
   position: fixed;
   width: 100%;
-  height: 50%;
+  height: 51%;
   background: #242424;
   z-index: 10;
 }
 .intro__pan__top {
-  animation: pantop 1s 3s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+  animation: pantop 1s 2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
   top: 0;
 }
 .intro__pan__bottom {
-  animation: panbottom 1s 3s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+  animation: panbottom 0.8s 2.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
   bottom: 0;
 }
 
