@@ -5,6 +5,7 @@
     background: linear-gradient(to top, $colour_darkengrey 90%, darken($colour_darkengrey, 20));
     & span, p{
         margin-right: 30px;
+        color: $colour_black;
     }
 }
 
@@ -78,6 +79,7 @@
         }
         
         &__title{
+            color: $colour_black;
             text-align: center;
             padding-left: 10px;
             margin-left: auto;

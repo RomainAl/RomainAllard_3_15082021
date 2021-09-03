@@ -75,9 +75,11 @@
             white-space: nowrap;
             text-overflow: ellipsis;
             padding: 15px 10px 15px 20px;
-            font-size: 1em;
+            font-size: 0.9em;
+            color: $colour_darkengrey3;
             & span{
-                font-size: 1.2em;
+                color: $colour_black;
+                font-size: 1.1em;
                 font-weight: bold;
             }
             width: 100%;
