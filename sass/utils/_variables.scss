@@ -2,11 +2,11 @@ $colour_grey: #F2F2F2;
 $colour_darkengrey: #e2e2e2;
 $colour_darkengrey2: #242424;
 $colour_darkengrey3: #707070;
-$colour_pink: #f56dee;
-$colour_purple: #9948c7;
+$colour_pink: #FF79DA;
+$colour_purple: #9356DC;
 $colour_white: #FFFFFF;
 $colour_black: #000000;
-$colour_green: #81d1b6;
+$colour_green: #99E2D0;
 
 $colour_mygrad: linear-gradient($colour_pink, $colour_purple);
 $colour_mygrad_lighten: linear-gradient(lighten($colour_pink, 8), lighten($colour_purple, 8));

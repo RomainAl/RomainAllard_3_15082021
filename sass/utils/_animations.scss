@@ -10,6 +10,16 @@
     }
 }
 
+@keyframes apparition2 {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 @keyframes pantop {
     0%{
         transform: translateY(0);
@@ -44,7 +54,7 @@
 
 @keyframes spin {
     0% { 
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
         opacity: 0.0;
     }
 
@@ -53,7 +63,7 @@
     }
     
     100% {
-        transform: rotate(2*360deg);
+        transform: translate(-50%, -50%) rotate(2*360deg);
         opacity: 0.0;
     }
   }
@@ -69,7 +79,7 @@
     }
 
     100% {
-        transform: rotate(-9*360deg);
+        transform: rotate(-7*360deg);
         opacity: 0.0;
     }
   }

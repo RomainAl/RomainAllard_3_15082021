@@ -9,58 +9,52 @@
     animation: invisibling 0.1s 4s both;
 
     &__logo{
-        position: relative;
-        text-align: center;
-        top: 47%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
         color: $colour_white;
         font-size: 1.2em;
         z-index: 11;
+        transform: translate(-50%, -50%);
         $effect_dur: 0.5s;
         $effect_delay: $intro_dur - $effect_dur;
-        animation: apparition $effect_dur ease-in $effect_delay reverse both;
+        animation: apparition2 $effect_dur ease-in $effect_delay reverse both;
     }
 
     &__loader {
         display: block;
-        position: relative;
-        top: 45%;
+        position: absolute;
+        top: 50%;
         left: 50%;
-        width: 200px;
-        height: 200px;
-        margin: -100px 0 0 -100px;
-        border-radius: 50%;
-        border: 4px solid transparent;
-        border-top-color: $colour_pink;
-        $effect_delay: 0.2s;
+        width: 170px;
+        height: 170px;
+        @include myborder_intro;        
+        $effect_delay: 0.1s;
         animation: spin $intro_dur $effect_delay linear both;
         z-index: 11;
         
         &:before {
         content: "";
         position: absolute;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
-        border-radius: 50%;
-        border: 4px solid transparent;
-        border-top-color: $colour_green;
-        $effect_delay: 0.1s;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        @include myborder_intro($colour_green);
+        $effect_delay: 0.3s;
         animation: spin-reverse $intro_dur $effect_delay linear both;
         }
         
         &:after {
         content: "";
         position: absolute;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-        border-radius: 50%;
-        border: 4px solid transparent;
-        border-top-color: $colour_purple;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        @include myborder_intro($colour_purple);
         $effect_delay: 0.05s;
-        animation: spin $intro_dur $effect_delay linear both;
+        animation: spin-reverse $intro_dur $effect_delay linear both;
         }
     }
     

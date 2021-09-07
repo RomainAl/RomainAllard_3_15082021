@@ -11,6 +11,12 @@
     border-radius: $myborderradiusvar;
 }
 
+@mixin myborder_intro($colour: $colour_pink) {
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: $colour;
+}
+
 @mixin mybtn($color_txt: $colour_white, $color_bg: $colour_mygrad, $padding : 18px){
     margin: 10px auto 10px auto;
     border: none;
