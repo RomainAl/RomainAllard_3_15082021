@@ -627,7 +627,7 @@ body {
   height: 100%;
   z-index: 10;
   overflow: hidden;
-  animation: invisibling 0.1s 4s both;
+  animation: invisibling 0.1s 3s both;
 }
 .intro__logo {
   position: absolute;

@@ -6,7 +6,7 @@
     height: 100%;
     z-index: 10;
     overflow: hidden;
-    animation: invisibling 0.1s 4s both;
+    animation: invisibling 0.1s $intro_dur both;
 
     &__logo{
         position: absolute;

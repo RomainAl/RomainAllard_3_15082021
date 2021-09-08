@@ -9,7 +9,7 @@ $colour_black: #000000;
 $colour_green: #99E2D0;
 
 $colour_mygrad: linear-gradient($colour_pink, $colour_purple);
-$colour_mygrad_lighten: linear-gradient(lighten($colour_pink, 8), lighten($colour_purple, 8));
+$colour_mygrad_lighten: linear-gradient(lighten($colour_pink, 8%), lighten($colour_purple, 8%));
 $myborderradiusvar: 25px;
 
 $breakpoints: (
