@@ -92,7 +92,7 @@
         }
         
         &:hover{
-            @include mybtn($colour_black, lighten($colour_purple, 40%));
+            @include mybtn($colour_black, lighten($colour_purple, 35%));
             > span{
                 color: $colour_purple;
             }

@@ -68,7 +68,7 @@
     }
   }
   
-  @keyframes spin-reverse {
+@keyframes spin-reverse {
     0% { 
         transform: rotate(0deg);
         opacity: 0.0;
@@ -82,14 +82,14 @@
         transform: rotate(-7*360deg);
         opacity: 0.0;
     }
-  }
+}
 
-  @keyframes invisibling {
-      0%{
-        visibility: visible;
-      }
+@keyframes invisibling {
+    0%{
+    visibility: visible;
+    }
 
-      100%{
-        visibility: hidden;
-      }
-  }
+    100%{
+    visibility: hidden;
+    }
+}

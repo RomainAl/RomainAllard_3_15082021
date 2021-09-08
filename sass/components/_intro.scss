@@ -33,7 +33,7 @@
         animation: spin $intro_dur $effect_delay linear both;
         z-index: 11;
         
-        &:before {
+        &::before {
         content: "";
         position: absolute;
         top: -15px;
@@ -45,7 +45,7 @@
         animation: spin-reverse $intro_dur $effect_delay linear both;
         }
         
-        &:after {
+        &::after {
         content: "";
         position: absolute;
         top: 5px;
